@@ -710,6 +710,9 @@ type EmailTrigger struct {
 	// +optional
 	Port int32 `json:"port,omitempty" protobuf:"varint,5,opt,name=port"`
 	// To refers to the email addresses to which the emails are send.
+	// Each element can be a single email address or multiple comma seperated emails
+	// Any whitespace around an email wil be trimmed
+	// An email will be sent with emails specified in each element of To
 	// +optional
 	To []string `json:"to,omitempty" protobuf:"bytes,6,rep,name=to"`
 	// From refers to the address from which the email is send from.

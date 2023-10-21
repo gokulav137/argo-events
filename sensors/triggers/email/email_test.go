@@ -166,13 +166,6 @@ func TestEmailTrigger_Execute(t *testing.T) {
 		assert.NotNil(t, err)
 	})
 
-	t.Run("Invalid to scenario", func(t *testing.T) {
-		trigger := getEmailTrigger(&MockNotificationService{})
-		trigger.Trigger.Template.Email.To = []string{"not@a@valid.email"}
-		_, err := trigger.Execute(context.TODO(), map[string]*v1alpha1.Event{}, trigger.Trigger.Template.Email)
-		assert.NotNil(t, err)
-	})
-
 	t.Run("Empty subject scenario", func(t *testing.T) {
 		trigger := getEmailTrigger(&MockNotificationService{})
 		trigger.Trigger.Template.Email.Subject = ""

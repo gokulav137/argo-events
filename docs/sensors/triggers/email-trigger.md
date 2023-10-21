@@ -60,9 +60,10 @@ where the name has to be substituted with the receiver name from the event.
           ...
           to:
             - target1@email.com
-            - target2@email.com
+            - target2@email.com, target3@email.com
           ...
         ```
+        The `to` supports single email addresses or comma seperated email addresses
 
 ## Parameterization
 

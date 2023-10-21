@@ -26,7 +26,7 @@ spec:
             name: smtp-secret
           # to:
           #   - target1@email.com
-          #   - target2@email.com
+          #   - target2@email.com, target3@email.com
           host: smtp.example.net
           port: 587
           from: example@email.com
